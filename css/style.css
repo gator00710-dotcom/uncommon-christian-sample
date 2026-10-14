@@ -292,3 +292,25 @@ header.site{border-bottom-color:#ff7a1a33}
 .yt-card img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block}
 .yt-card span{display:block;padding:.8rem 1rem;font-weight:700}
 .yt-card:hover{transform:translateY(-4px);box-shadow:0 0 24px #ff7a1a66}
+
+/* ===== headings: never break inside words ===== */
+h1,h2,h3,h4,h5,h6,.mega,.eyebrow,.ep .eyebrow{word-break:normal;overflow-wrap:normal;hyphens:none;-webkit-hyphens:none}
+/* longest word (CHRISTIAN/UNCOMMON ~5.6em at uppercase serif) must fit its column */
+@media (min-width:1024px){.banner .split h1{font-size:clamp(2.4rem,4.4vw,5.2rem)}.banner h1{font-size:clamp(2.6rem,6.5vw,7rem)}}
+
+/* ===== desktop nav: two-tier, all links visible ===== */
+.nav-podcast{display:none}
+@media (max-width:1023px){.burger{display:block}.menu{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;background:#0b0c0dF5;padding:1rem;border-bottom:1px solid #ffffff14}.menu.open{display:flex}.menu a{font-size:1rem;padding:.8rem}
+.nav-podcast{display:inline-block;color:var(--ink);text-decoration:none;font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;padding:.45rem .8rem;border:1px solid #ff7a1a88;border-radius:10px;margin-right:.5rem}}
+@media (min-width:1024px){
+.burger{display:none!important}
+.nav{flex-wrap:wrap;max-width:1400px;padding:.7rem 1.5rem 0;row-gap:.35rem}
+.menu,.menu.open{display:flex!important;position:static;flex-direction:row;flex:1 0 100%;order:5;flex-wrap:nowrap;justify-content:space-between;gap:.25rem;background:none;padding:.15rem 0 0;border:0;border-top:1px solid #ff7a1a2e}
+.menu li{flex:0 1 auto}
+.menu a{position:relative;white-space:nowrap;font-size:clamp(.8rem,.55rem + .42vw,1.02rem);font-weight:700;letter-spacing:.05em;padding:.75rem clamp(.2rem,.6vw,.7rem);border-radius:0;background:none!important;transition:color .25s,text-shadow .25s}
+.menu a::after{content:"";position:absolute;left:18%;right:18%;bottom:.3rem;height:2px;border-radius:2px;background:linear-gradient(90deg,#e8340c,#ff7a1a,#ffd54a);box-shadow:0 0 10px #ff7a1a,0 0 18px #e8340caa;transform:scaleX(0);transition:transform .3s}
+.menu a:hover,.menu a:focus-visible,.menu a[aria-current=page]{color:#ffb070;text-shadow:0 0 14px #ff7a1a99}
+.menu a:hover::after,.menu a:focus-visible::after,.menu a[aria-current=page]::after{transform:scaleX(1)}
+header.site.scrolled .nav{padding:.3rem 1.5rem 0}}
+@media (max-width:359px){h1,.banner h1{font-size:clamp(1.9rem,10vw,2.6rem)}}
+@media (min-width:1024px){.menu,.menu.open{flex-wrap:wrap;justify-content:center;column-gap:clamp(.2rem,.8vw,1rem)}.menu li{flex:0 0 auto}.menu a{padding:.6rem clamp(.35rem,.7vw,.8rem)}}
