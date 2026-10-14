@@ -282,3 +282,4 @@ header.site{border-bottom-color:#ff7a1a33}
 .yt-promo .lead{max-width:640px;margin:0 auto 2rem}
 .yt-promo .video{max-width:900px;margin:0 auto 2rem}
 .btn.yt-btn{font-size:1.15rem;padding:1rem 2rem}
+.nav-podcast{display:none}@media (max-width:1280px){.nav-podcast{display:inline-block;color:var(--ink);text-decoration:none;font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;padding:.45rem .8rem;border:1px solid #ff7a1a88;border-radius:10px;margin-right:.5rem}}
