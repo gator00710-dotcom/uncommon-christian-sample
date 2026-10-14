@@ -228,14 +228,14 @@ html{overflow-x:clip}fieldset{min-width:0}
 @media (prefers-reduced-motion:reduce){.cine-zoom{animation:none}}
 /* ===== v4: fire glow on every blue button ===== */
 .btn:not(.ghost){position:relative;isolation:isolate;animation:none;box-shadow:0 0 18px #ff7a1a66,0 0 0 1px #ff7a1a33}
-.btn:not(.ghost)::after{content:"";position:absolute;inset:-6px;border-radius:inherit;z-index:-1;background:radial-gradient(ellipse at 50% 100%,#ffb347 0%,#ff7a1a 40%,#e8340c 70%,transparent 100%);filter:blur(12px);opacity:.75;animation:fireglow 2.5s ease-in-out infinite;pointer-events:none}
+.btn:not(.ghost)::after{content:"";position:absolute;inset:-6px;border-radius:inherit;z-index:-1;background:radial-gradient(ellipse at 50% 100%,#ffb347 0%,#ff7a1a 40%,#e8340c 70%,transparent 100%);filter:blur(12px);opacity:.75;animation:fireglow 7s ease-in-out infinite;pointer-events:none}
 @keyframes fireglow{0%,100%{opacity:.55;transform:scale(.97,.94)}35%{opacity:.95;transform:scale(1.05,1.1)}60%{opacity:.7;transform:scale(1.01,1.02)}80%{opacity:.9;transform:scale(1.04,1.07)}}
 .btn:not(.ghost):hover::after{opacity:1}
 @media (prefers-reduced-motion:reduce){.btn:not(.ghost)::after{animation:none;opacity:.75;transform:none}}
 .cine-zoom{-webkit-mask-image:radial-gradient(ellipse 30% 52% at 78% 54%,#000 35%,transparent 100%);mask-image:radial-gradient(ellipse 30% 52% at 78% 54%,#000 35%,transparent 100%)}
 @media (max-width:860px){.cine-zoom{background-size:auto 40%;background-position:50% 10%;-webkit-mask-image:radial-gradient(ellipse 42% 24% at 50% 25%,#000 35%,transparent 100%);mask-image:radial-gradient(ellipse 42% 24% at 50% 25%,#000 35%,transparent 100%)}.cine-in{padding-top:46vh}}
 .btn:not(.ghost)::after{display:none}
-.btn:not(.ghost){isolation:auto;animation:fireglow2 2.5s ease-in-out infinite}
+.btn:not(.ghost){isolation:auto;animation:fireglow2 7s ease-in-out infinite}
 @keyframes fireglow2{0%,100%{box-shadow:0 0 0 1px #ff7a1a40,0 4px 14px #ff7a1a55,0 8px 26px #e8340c33}
 35%{box-shadow:0 0 0 1px #ffb34780,0 4px 22px #ff7a1acc,0 10px 44px #e8340c88,0 0 60px #ffb34744}
 60%{box-shadow:0 0 0 1px #ff7a1a60,0 4px 16px #ff7a1a88,0 8px 32px #e8340c55}
@@ -277,3 +277,18 @@ header.site{border-bottom-color:#ff7a1a33}
  .card{animation:none!important;box-shadow:0 10px 30px #000a,0 0 0 1px #ff7a1a2e,0 0 22px #ff7a1a22}}
 @keyframes fireglowonly{0%,100%{box-shadow:0 0 4px #ff7a1a55}50%{box-shadow:0 0 12px #ff7a1a,0 0 24px #e8340c88}}
 .demo-pill,.ship:has(input:checked),.badge{animation:fireglowonly 3.6s ease-in-out infinite;opacity:1}
+.yt-promo{position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 120%,#e8340c55,transparent 60%),#0b0b0b;padding:5rem 0;text-align:center}
+.yt-promo h2{font-size:clamp(2.2rem,6vw,4rem);margin:.3rem 0;letter-spacing:.02em}
+.yt-promo .lead{max-width:640px;margin:0 auto 2rem}
+.yt-promo .video{max-width:900px;margin:0 auto 2rem}
+.btn.yt-btn{font-size:1.15rem;padding:1rem 2rem}
+.nav-podcast{display:none}@media (max-width:1280px){.nav-podcast{display:inline-block;color:var(--ink);text-decoration:none;font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;padding:.45rem .8rem;border:1px solid #ff7a1a88;border-radius:10px;margin-right:.5rem}}
+
+.yt-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.18;filter:blur(3px) saturate(1.2)}
+.yt-promo .wrap{position:relative}
+.yt-avatar{width:120px;height:120px;border-radius:50%;margin:0 auto 1rem;box-shadow:0 0 0 3px #ff7a1a,0 0 30px #e8340caa}
+.yt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;max-width:1100px;margin:0 auto;text-align:left}
+.yt-card{display:block;background:#111;border:1px solid #ff7a1a33;border-radius:14px;overflow:hidden;color:var(--ink);text-decoration:none;transition:transform .3s,box-shadow .3s}
+.yt-card img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block}
+.yt-card span{display:block;padding:.8rem 1rem;font-weight:700}
+.yt-card:hover{transform:translateY(-4px);box-shadow:0 0 24px #ff7a1a66}
