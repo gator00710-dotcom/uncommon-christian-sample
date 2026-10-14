@@ -228,14 +228,14 @@ html{overflow-x:clip}fieldset{min-width:0}
 @media (prefers-reduced-motion:reduce){.cine-zoom{animation:none}}
 /* ===== v4: fire glow on every blue button ===== */
 .btn:not(.ghost){position:relative;isolation:isolate;animation:none;box-shadow:0 0 18px #ff7a1a66,0 0 0 1px #ff7a1a33}
-.btn:not(.ghost)::after{content:"";position:absolute;inset:-6px;border-radius:inherit;z-index:-1;background:radial-gradient(ellipse at 50% 100%,#ffb347 0%,#ff7a1a 40%,#e8340c 70%,transparent 100%);filter:blur(12px);opacity:.75;animation:fireglow 4.1s ease-in-out infinite;pointer-events:none}
+.btn:not(.ghost)::after{content:"";position:absolute;inset:-6px;border-radius:inherit;z-index:-1;background:radial-gradient(ellipse at 50% 100%,#ffb347 0%,#ff7a1a 40%,#e8340c 70%,transparent 100%);filter:blur(12px);opacity:.75;animation:fireglow 7s ease-in-out infinite;pointer-events:none}
 @keyframes fireglow{0%,100%{opacity:.55;transform:scale(.97,.94)}35%{opacity:.95;transform:scale(1.05,1.1)}60%{opacity:.7;transform:scale(1.01,1.02)}80%{opacity:.9;transform:scale(1.04,1.07)}}
 .btn:not(.ghost):hover::after{opacity:1}
 @media (prefers-reduced-motion:reduce){.btn:not(.ghost)::after{animation:none;opacity:.75;transform:none}}
 .cine-zoom{-webkit-mask-image:radial-gradient(ellipse 30% 52% at 78% 54%,#000 35%,transparent 100%);mask-image:radial-gradient(ellipse 30% 52% at 78% 54%,#000 35%,transparent 100%)}
 @media (max-width:860px){.cine-zoom{background-size:auto 40%;background-position:50% 10%;-webkit-mask-image:radial-gradient(ellipse 42% 24% at 50% 25%,#000 35%,transparent 100%);mask-image:radial-gradient(ellipse 42% 24% at 50% 25%,#000 35%,transparent 100%)}.cine-in{padding-top:46vh}}
 .btn:not(.ghost)::after{display:none}
-.btn:not(.ghost){isolation:auto;animation:fireglow2 4.1s ease-in-out infinite}
+.btn:not(.ghost){isolation:auto;animation:fireglow2 7s ease-in-out infinite}
 @keyframes fireglow2{0%,100%{box-shadow:0 0 0 1px #ff7a1a40,0 4px 14px #ff7a1a55,0 8px 26px #e8340c33}
 35%{box-shadow:0 0 0 1px #ffb34780,0 4px 22px #ff7a1acc,0 10px 44px #e8340c88,0 0 60px #ffb34744}
 60%{box-shadow:0 0 0 1px #ff7a1a60,0 4px 16px #ff7a1a88,0 8px 32px #e8340c55}
@@ -277,3 +277,8 @@ header.site{border-bottom-color:#ff7a1a33}
  .card{animation:none!important;box-shadow:0 10px 30px #000a,0 0 0 1px #ff7a1a2e,0 0 22px #ff7a1a22}}
 @keyframes fireglowonly{0%,100%{box-shadow:0 0 4px #ff7a1a55}50%{box-shadow:0 0 12px #ff7a1a,0 0 24px #e8340c88}}
 .demo-pill,.ship:has(input:checked),.badge{animation:fireglowonly 3.6s ease-in-out infinite;opacity:1}
+.yt-promo{position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 120%,#e8340c55,transparent 60%),#0b0b0b;padding:5rem 0;text-align:center}
+.yt-promo h2{font-size:clamp(2.2rem,6vw,4rem);margin:.3rem 0;letter-spacing:.02em}
+.yt-promo .lead{max-width:640px;margin:0 auto 2rem}
+.yt-promo .video{max-width:900px;margin:0 auto 2rem}
+.btn.yt-btn{font-size:1.15rem;padding:1rem 2rem}
